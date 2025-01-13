@@ -16,7 +16,7 @@ spec:
         - name: ecr-key
       containers:
         - name: javaapp
-          image: 209479277669.dkr.ecr.ap-south-1.amazonaws.com/sept-2024 
+          image: 209479277669.dkr.ecr.ap-south-1.amazonaws.com/sept-2024:CI-CD
           imagePullPolicy: Always
           ports:
             - containerPort: 80 # The port that the container is running on in the cluster
