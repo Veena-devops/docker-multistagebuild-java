@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: javaapp
-          image: java:multi 
+          image: 209479277669.dkr.ecr.ap-south-1.amazonaws.com/sept-2024 
           imagePullPolicy: Always
           ports:
             - containerPort: 80 # The port that the container is running on in the cluster
