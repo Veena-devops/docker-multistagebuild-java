@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment 
+metadata:
+  name: Javaapp-deployment
+spec:
+  selector:
+    matchLabels:
+      app: Javaapp
+  replicas: 2 
+  template:
+    metadata:
+      labels:
+        app: Javaapp
+    spec:
+      containers:
+        - name: Javaapp
+          image: java:multi 
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80 # The port that the container is running on in the cluster
+
+
+---
+
+apiVersion: v1 
+kind: Service 
+metadata: 
+  name: Javaapp-ssvc
+spec:
+  selector:
+    app: Javaapp
+  ports:
+    - protocol: "TCP"
+      port: 80
+      targetPort: 80 
+  type: LoadBalancer # type of the service.
