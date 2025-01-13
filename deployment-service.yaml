@@ -12,6 +12,8 @@ spec:
       labels:
         app: javaapp
     spec:
+      imagePullSecrets:
+        - name: ecr-key
       containers:
         - name: javaapp
           image: 209479277669.dkr.ecr.ap-south-1.amazonaws.com/sept-2024 
