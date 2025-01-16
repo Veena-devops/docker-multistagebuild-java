@@ -22,20 +22,7 @@ spec:
           ports:
             - containerPort: 80 # The port that the container is running on in the cluster
 
----
 
-apiVersion: v1 
-kind: Service 
-metadata: 
-  name: javaapp-ssvc
-spec:
-  selector:
-    app: javaapp
-  ports:
-    - protocol: "TCP"
-      port: 80
-      targetPort: 80 
-  type: LoadBalancer # type of the service.
 
 
 
