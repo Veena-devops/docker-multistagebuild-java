@@ -17,6 +17,7 @@ spec:
       containers:
         - name: javaapp
           image: 209479277669.dkr.ecr.ap-south-1.amazonaws.com/sept-2024:CI-CD
+          command: ["/bin/sh","-c","sleep infinity"]
           imagePullPolicy: Always
           ports:
             - containerPort: 80 # The port that the container is running on in the cluster
